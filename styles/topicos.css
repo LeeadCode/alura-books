@@ -1,0 +1,43 @@
+.topicos {
+  text-align: center;
+  padding: 1em;
+  color: var(--default);
+  background-color: var(--secundaria);
+}
+
+.topicos__texto {
+  margin: 0.8rem 0 2.4rem;
+  font-weight: 500;
+}
+
+.topicos__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
+}
+
+.topicos__container > a {
+  background-color: var(--primaria);
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1em;
+  color: var(--default);
+}
+
+@media screen and (min-width: 1024px) {
+  .topicos__container > a { 
+    font-size: 2.4rem;
+  }
+
+  .topicos__texto {
+    font-size: 2.4rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .topicos {
+    padding: 1em 20vw 1em 20vw;
+  }
+}

@@ -1,0 +1,148 @@
+.cabecalho__menu {
+  width: 8rem;
+  height: 8rem;
+  background-image: url('../assets/Menu.svg');
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cabecalho {
+  background-color: var(--default);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem 1.2rem 1.8rem 0;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container__item {
+  padding: 1.2rem;
+}
+
+.lista-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: var(--default);
+  width: 60vw;
+  z-index: 10;
+}
+
+.lista-menu li:hover {
+  background-color: var(--secundaria);
+}
+
+.lista-menu li:hover a {
+  color: var(--default);
+}
+
+.lista-menu__titulo {
+  color: var(--primaria);
+  font-weight: 700;
+  padding: 2.4rem 2.4rem 0.8rem 2.4rem;
+}
+
+.lista-menu__item {
+  padding: 2.4rem 1.6rem;
+}
+
+.lista-menu__link {
+  color: var(--secundaria);
+}
+
+.container__botao {
+  display: none;
+}
+
+.container__botao:checked ~ .lista-menu {
+  display: block;
+}
+
+.container__titulo {
+  display: none;
+}
+
+.opcoes {
+  display: none;
+}
+
+.opcoes__botao {
+  display: none;
+}
+
+.container__descricao {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .cabecalho {
+    padding: 1.8rem 8rem;
+  }
+
+  .container__titulo, .container__titulo--negrito {
+    font-family: var(--fonte-secundaria);
+    font-size: 3rem;
+  }
+
+  .container__titulo {
+    display: block;
+    font-weight: 400;
+  }
+
+  .container__titulo--negrito {
+    font-weight: 700;
+  }
+
+  .opcoes {
+    display: flex;
+    align-items: center;
+  }
+
+  .opcoes > li {
+    padding: 0 1rem;
+    text-transform: uppercase;
+
+  }
+
+  .opcoes-menu_titulo, .opcoes > li > a{
+    color: black;
+    padding: 0 1rem;
+  }
+
+  #icone-menu {
+    display: none;
+  }
+
+  #icone-favoritos {
+    display: none;
+  }
+
+  .opcoes__botao:checked ~ .lista-menu {
+    display: block;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .container__item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .container__descricao {
+    color: black;
+    font-size: 20px;
+    display: block;
+  }
+
+  .opcoes {
+    margin-right: auto;
+    padding-left: 10rem;
+  }
+}
